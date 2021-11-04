@@ -3,19 +3,25 @@
     background-color: #000000;
     border: solid 1px red;
     color: white;
-    float: right;
+    float: left;
+    height: 300px;
+    width: 300px;
     }
     .cuadrado2{
     padding:5px;
     background-color: #000000;
     border: solid 1px red;
     color: white;
-    float: right;
+    float: left;
+    height: 300px;
+    width: 300px;
     }
     .cuadrado3{
     padding:5px;
     background-color: #000000;
     border: solid 1px red;
     color: white;
-    float: right;
+    float: left;
+    height: 300px;
+    width: 300px;
     }
