@@ -1,27 +1,140 @@
-.cuadrado1{
-    padding:5px;
-    background-color: #000000;
-    border: solid 1px red;
-    color: white;
+.seccio1{
+    background-color: rgb(89,41,65,0.7);
+    border: black 5px dashed;
+    color: black;
     float: left;
-    height: 300px;
-    width: 300px;
-    }
-    .cuadrado2{
-    padding:5px;
-    background-color: #000000;
-    border: solid 1px red;
-    color: white;
+    height: 650px;
+    width: 31.6%;
+    text-align: center;
+    font-size: 60px;
+    border-style: dashed;
+    font-family: cursive;
+}
+
+.seccio2{
+    background-color: rgb(178, 211, 168,0.7);
+    border: black 5px dashed;
+    border-style: dashed;
+    color: black;
     float: left;
-    height: 300px;
-    width: 300px;
-    }
-    .cuadrado3{
-    padding:5px;
-    background-color: #000000;
-    border: solid 1px red;
-    color: white;
+    height: 650px;
+    width: 31.6%;
+    font-size: 60px;
+    text-align: center;
+    font-family: cursive;
+}
+
+.seccio3{
+    background-color: rgb(237, 229, 166,0.7);
+    border: black 5px dashed;
+    color: black;
     float: left;
-    height: 300px;
-    width: 300px;
+    height: 650px;
+    width: 31.6%;
+    font-size: 60px;
+    text-align: center;
+    font-family: cursive;
+    overflow: hidden;
+}
+
+body {
+    height: 650px;
+    width: 95%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("Pictures/wallpaper.jpg");
+    background-position: center;
+}
+
+
+.afegir {
+    font-size: 55px;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: black;
+    border-radius: 5px;
+    letter-spacing: 2px;
+    background-color: rgb(149, 147, 217);
+    padding: 15px 15px;
+    position: fixed;
+    bottom: 40px;
+    right: 90px;
+    transition: all 300ms ease 0ms;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    z-index: 99;
+    
+}
+
+
+.afegir:hover {
+    background-color: rgb(229, 190, 237); /* Color de fondo al pasar el cursor */
+    box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.3);
+    transform: translateY(-10px);
+}
+
+.second {
+    border-color: #3498db;
+    color: #fff;
+    box-shadow: 0 0 60px 60px #3498db inset, 0 0 0 0 #3498db;
+    -webkit-transition: all 150ms ease-in-out;
+    transition: all 150ms ease-in-out;
+    font-size: 10px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    position: relative;
+  }
+  .second:hover {
+    box-shadow: 0 0 10px 0 #3498db inset, 0 0 10px 4px #3498db;
+    transform: translateY(-8px);   
     }
+    
+.one {
+        border-color: #3498db;
+        color: #fff;
+        box-shadow: 0 0 60px 60px #3498db inset, 0 0 0 0 #3498db;
+        -webkit-transition: all 150ms ease-in-out;
+        transition: all 150ms ease-in-out;
+        font-size: 10px;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        position: relative;
+      }
+    .one:hover {
+        box-shadow: 0 0 10px 0 #3498db inset, 0 0 10px 4px #3498db;
+        transform: translateY(-8px);   
+        }
+
+
+
+
+h2,p{
+font-size:100%;
+font-weight:normal;
+}
+ul,li{
+list-style:none; /* quito el punto de la lista */
+}
+ul{
+overflow:hidden;  /* ocultar el texto que salga de la Nota */
+padding:3em;
+}
+ul li a{
+
+text-decoration:none;
+color:#000;
+background-image: url("Pictures/prova.png");
+background-position: center;
+display:block;  /* genera un bloque por cada li */
+height:10em; /* altura de la Nota */
+width:10em;  /* anchura de la Nota */
+padding:1em;  /* espacio entre texto de las Notas */
+
+
+}
+ul li{
+margin:1em;  /* espacio entre las notas */
+float:left;  /* alinear notas */
+}
