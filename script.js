@@ -6,13 +6,8 @@ nota = document.getElementsById("nota");
 editar = document.getElementsByClassName("editar");
 eliminar = document.getElementsByClassName("eliminar");
 
-
-
-
-
-
-
-
+eliminar.add
+nota.Add
 
 // color = document.getElementById("nota").innerHTML;
 
