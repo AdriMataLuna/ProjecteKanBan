@@ -15,11 +15,13 @@ body {
     height: 650px;
     width: 31.6%;
     text-align: center;
-    font-size: 60px;
+    font-size: 100px;
+    font-size: 4vw;
     border-style: dashed;
-    font-family: cursive;
+    font-family: 100%;
     overflow: hidden;
     text-decoration-line: underline;
+  
 }
 .seccio2{
     background-color: rgba(132, 130, 143,0.7);
@@ -29,9 +31,10 @@ body {
     float: left;
     height: 650px;
     width: 31.6%;
-    font-size: 60px;
+    font-size: 100px;
+    font-size: 4vw;
     text-align: center;
-    font-family: cursive;
+    font-family: 100%;
     overflow: hidden;
     text-decoration-line: underline;
 }
@@ -42,7 +45,8 @@ body {
     float: left;
     height: 650px;
     width: 31.6%;
-    font-size: 60px;
+    font-size: 100px;
+    font-size: 4vw;
     text-align: center;
     font-family: cursive;
     overflow: hidden;
@@ -64,6 +68,8 @@ body {
     transition: all 300ms ease 0ms;
     box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
     z-index: 99;
+    
+
 }
 
 .afegir:hover {
@@ -82,26 +88,34 @@ body {
     width: 25px;
     height: 25px;
     border-radius: 50%;
+    position: relative;
+    right: -250px;
+    top: 15px;
+
 }
 .editar:hover {
     box-shadow: 0 0 10px 0 #3498db inset, 0 0 10px 4px #3498db;
     transform: translateY(-8px);   
 }
+
+
     
 .eliminar {
-    border-color: #3498db;
+    border-color: #f01515;
     color: #fff;
-    box-shadow: 0 0 60px 60px #3498db inset, 0 0 0 0 #3498db;
+    box-shadow: 0 0 60px 60px #760000 inset, 0 0 0 0 #fb0303;
     -webkit-transition: all 150ms ease-in-out;
     transition: all 150ms ease-in-out;
     font-size: 75%;
     width: 25px;
     height: 25px;
     border-radius: 50%;
-    position: left;
+    position: relative;
+    right: -180px;
+    top: 15px;
 }
 .eliminar:hover {
-    box-shadow: 0 0 10px 0 #3498db inset, 0 0 10px 4px #3498db;
+    box-shadow: 0 0 10px 0 #ff4f4f inset, 0 0 10px 4px #f04141;
     transform: translateY(-8px);   
 }
 
@@ -110,6 +124,19 @@ h4{
     width:90%;
     
 }
+
+h1{
+    font-size:210%;
+    font-weight:bold;
+    
+   }
+h2,h4{
+    font-size:180%;
+    font-weight:normal;
+    
+   }
+
+
 ul{
     overflow:none;  /* ocultar el texto que no salga de la nota*/
     background-color: #592941;
