@@ -111,7 +111,7 @@ h4{
     
 }
 ul{
-    overflow:scroll;  /* ocultar el texto que no salga de la nota*/
+    overflow:none;  /* ocultar el texto que no salga de la nota*/
     background-color: #592941;
     list-style:none;
     font-family: 'Reenie Beanie', cursive;
