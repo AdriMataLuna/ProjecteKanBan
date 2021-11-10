@@ -9,8 +9,7 @@ eliminar = document.getElementsByClassName("eliminar");
 eliminar.add
 nota.Add
 
-// color = document.getElementById("nota").innerHTML;
-
+//color = document.getElementById("nota").innerHTML;
 // if (color.style.background-color == #592941){
 //     document.getElementById("nota").style.background-color = "#0000FF";
 //     color.getElementById("")

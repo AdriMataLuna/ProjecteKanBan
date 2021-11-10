@@ -21,7 +21,6 @@ body {
     font-family: 100%;
     overflow: hidden;
     text-decoration-line: underline;
-  
 }
 .seccio2{
     background-color: rgba(132, 130, 143,0.7);
@@ -69,8 +68,6 @@ body {
     transition: all 300ms ease 0ms;
     box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
     z-index: 99;
-    
-
 }
 
 .afegir:hover {
@@ -115,6 +112,7 @@ body {
     right: -180px;
     top: 15px;
 }
+
 .eliminar:hover {
     box-shadow: 0 0 10px 0 #ff4f4f inset, 0 0 10px 4px #f04141;
     transform: translateY(-8px);   
@@ -122,20 +120,18 @@ body {
 
 h4{
     overflow: scroll;
-    width:90%;
-    
+    width:90%;  
 }
 
 h1{
     font-size:210%;
     font-weight:bold;
-    
-   }
+}
+
 h2,h4{
     font-size:180%;
     font-weight:normal;
-    
-   }
+}
 
 
 ul{
@@ -161,4 +157,4 @@ ul:hover,ul:focus{
     transform: scale(1.25);
     position:relative;
     z-index:5;
-   }
+}
