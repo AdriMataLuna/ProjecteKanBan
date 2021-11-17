@@ -1,15 +1,53 @@
-zonaToDo = document.getElementsByClassName("seccio1");
-zonaDoing = document.getElementsByClassName("seccio2");
-zonaDone = document.getElementsByClassName("seccio3");
-crear = document.getElementsByClassName("afegir");
-nota = document.getElementsById("nota");
-editar = document.getElementsByClassName("editar");
-eliminar = document.getElementsByClassName("eliminar");
+let zonaToDo = document.getElementsByClassName("seccio1");
+let zonaDoing = document.getElementsByClassName("seccio2");
+let zonaDone = document.getElementsByClassName("seccio3");
+let crear = document.getElementsByClassName("afegir");
+let nota = document.getElementsById("nota");
+let editar = document.getElementsByClassName("editar");
+let eliminar = document.getElementsByClassName("eliminar");
 
-eliminar.add
-nota.Add
 
-//color = document.getElementById("nota").innerHTML;
+
+// function dragstart(caja, event) {
+//     // el elemento a arrastrar
+//     event.dataTransfer.setData('Data', caja.id);
+// }
+
+// function drag(target, event) {
+//     console.log("drag");
+//     return false;
+// }
+
+// function dragend(target, event) {
+//     console.log("dragend");
+//     return false;
+// }
+
+// function dragenter(target, event) {
+//     console.log("dragenter");
+//     return false;
+// }
+
+// function dragleave(target, event) {
+//     console.log("dragleave");
+//     return false;
+// }
+
+// function dragover(event) {
+//     console.log("dragover");
+//     event.preventDefault();
+//     return false;
+// }
+
+// function drop(target, event) {
+//     // obtenemos los datos
+//     var caja = event.dataTransfer.getData('Data');
+//     // agregamos el elemento de arrastre al contenedor
+//     target.appendChild(document.getElementById(caja));
+// }
+
+
+// color = document.getElementById("nota").innerHTML;
 // if (color.style.background-color == #592941){
 //     document.getElementById("nota").style.background-color = "#0000FF";
 //     color.getElementById("")
