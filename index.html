@@ -4,48 +4,57 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./style.css">
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css"/>
       <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Reenie+Beanie"/>
+     
     <title></title>
 
 </head>
 <body >
-    <div class="seccio1" ondrop="drop(event)" ondragover="allowDrop(event)">ToDo</div>
-    <div class="seccio2" ondrop="drop(event)" ondragover="allowDrop(event)">DOING</div>
-    <div class="seccio3" ondrop="drop(event)" ondragover="allowDrop(event)">DONE</div>
+    <div id="seccio1" class="seccio1" ondrop="drop(event)" ondragover="allowDrop(event)">ToDo</div>
+    <div id="seccio2" class="seccio2" ondrop="drop(event)" ondragover="allowDrop(event)">DOING</div>
+    <div id="seccio3" class="seccio3" ondrop="drop(event)" ondragover="allowDrop(event)">DONE</div>
 
-    <button class="afegir" onclick="afegir()"><i class="fas fa-plus-circle"></i></button>
+    <a href="./formulari.html" class="afegir"><i class="fas fa-plus-circle"></i></a>
     
-    <ul id="nota" class="primaria" draggable="true" ondragstart="drag(event)" hidden>
-        <li><a href="#">
-            <button class="editar"><i class="fas fa-edit"></i></button>
-            <button class="eliminar" onclick="eliminar()"><i class="fas fa-trash-alt"></i></button>
-            <h1>TITOL</h1>
-            <h2>Encarregat // Inici-Final</h2>
-            <h4>Tasca</h4>
-        </a>
-        </li>
-    </ul>
 
-    <ul id="nota2"></ul>
+    <div hidden>
+        <ul id="nota" class="final" draggable="true" ondragstart="drag(event)">
+            <li><a href="#">
+                <button id="edit" class="editar"><i class="fas fa-edit"></i></button>
+                <button id="elim" class="eliminar" onclick="eliminar()"><i class="fas fa-trash-alt"></i></button>
+                <h1>TITOL</h1>
+                <h2>Encarregat // Inici-Final</h2>
+                <h4>Tasca</h4>
+            </a>
+            </li>
+        </ul>
 
-    <script>
+        <ul id="nota1" class="final" draggable="true" ondragstart="drag(event)">
+            <li><a href="#">
+                <button id="edit" class="editar"><i class="fas fa-edit"></i></button>
+                <button id="elim" class="eliminar" onclick="eliminar()"><i class="fas fa-trash-alt"></i></button>
+                <input type="text" name="nom" id="nom">
+                <input type="text" name="encarregat" id="encarregat">
+                <input type="text" name="descrip" id="descrip">
+            </a>
+            </li>
+        </ul>
+    </div>
     
-    function afegir(){
-        const nota  = document.getElementById("nota").innerHTML;
-        document.getElementById("nota2").innerHTML = nota; 
-        console.log(nota)
-    }
+
+    <div id="general">
+
+
+
+    </div>
+
     
-    function eliminar(){
-        var eliminado = document.getElementById("nota2");
-        eliminado.parentNode.removeChild(eliminado);
-    }
+
+    <script type="text/javascript" src="./script.js"></script>
     
-    </script>
- 
 </body>
 </html>
