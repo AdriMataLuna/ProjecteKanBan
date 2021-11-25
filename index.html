@@ -14,27 +14,23 @@
 
 </head>
 <body >
-    <div id="seccio1" class="seccio1" ondrop="drop(event)" ondragover="allowDrop(event)">ToDo</div>
-    <div id="seccio2" class="seccio2" ondrop="drop(event)" ondragover="allowDrop(event)">DOING</div>
-    <div id="seccio3" class="seccio3" ondrop="drop(event)" ondragover="allowDrop(event)">DONE</div>
+    <div id="zona1" class="seccio1" ondrop="drop(event)" ondragover="allowDrop(event)">ToDo </div>
+    <div id="zona2" class="seccio2" ondrop="drop(event)" ondragover="allowDrop(event)">DOING</div>
+    <div id="zona3" class="seccio3" ondrop="drop(event)" ondragover="allowDrop(event)">DONE</div>
 
-    <a href="./formulari.html" class="afegir"><i class="fas fa-plus-circle"></i></a>
+    <a href="./formulari.html" class="afegir" id="boto"><i class="fas fa-plus-circle"></i></a>
     
 
-    <div hidden>
-        
-
-        <ul id="nota1" class="final" draggable="true" ondragstart="drag(event)">
-            <li><a href="#">
+    <ul id="nota1" class="final" draggable="true" ondragstart="drag(event)" hidden>
+        <li>
+            <a href="#">
                 <button id="edit" class="editar"><i class="fas fa-edit"></i></button>
                 <button id="elim" class="eliminar" onclick="eliminar()"><i class="fas fa-trash-alt"></i></button>
-                <input type="text" name="nom" id="nom">
-                <input type="text" name="encarregat" id="encarregat">
-                <input type="text" name="descrip" id="descrip">
+                <h1 id="informacio"></h1>
             </a>
-            </li>
-        </ul>
-    </div>
+        </li>
+    </ul>
+    
     
 
     <div id="general">

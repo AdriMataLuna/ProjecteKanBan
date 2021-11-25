@@ -1,40 +1,103 @@
-let fullData = JSON.parse.window.localStorage.getItem('dades');
-let id = document.getElementById("codi");
-let name = document.getElementById("nom");
-let prev = document.getElementById("data_de_previsio");
-let term = document.getElementById("data_de_termini");
-let desc = document.getElementById("descripcio");
+let zonaToDo = document.getElementById("zona1");
+let zonaDoing = document.getElementById("zona2");
+let zonaDone = document.getElementById("zona3");
+let desti = document.getElementById("zona").value;
+let id = document.getElementById("codi").value;
+let nom = document.getElementById("nom").value;
+let prev = document.getElementById("data_de_previsio").value;
+let term = document.getElementById("data_de_termini").value;
+let desc = document.getElementById("descripcio").value;
+let prio = document.getElementById("prioritat").value;
 let guarda_dades = document.getElementById("final");
+let nota = document.getElementById("nota1");
 
 
-
+if(window.localStorage.getItem('0') == null){
+    contador = 0;
+}
 
 guarda_dades.addEventListener("click", () => {
-
     guardar();
-
+    window.location.href = "./index.html";
+    // neteja();
+    omple();
     
-
 })
-
-
-
-eliminar.addEventListener("click", () => {
-    window.localStorage.removeItem('dades');
-    titol.innerText = `Hola Nou Usuari`;
-})
-
-
-
 
 function guardar(){
     date = getDate;
-    let tempData = {codi: codi.value, nom: nom.value,
-    prevDur: data_de_previsio.value, term: data_de_termini.value,
-    desc: descripcio.value, data: date.value};
-    window.localStorage.setItem('dades', JSON.stringify(dada));
+    let tempData = {
+        id: id.value, nom: nom.value,
+    prevDur: prev.value, term: term.value, descrip: desc.value,
+    color: prio.value,data: date.value,destination: desti.value};
+    window.localStorage.setItem(contador, JSON.stringify(tempData));
+    contador++;
 }
 
+function omple(){
+    zonaToDo.innerHTML = "<div> <h1> HOLA </h1> </div>";
+    for(i = 0;i < contador;i++){
+    oldData = JSON.parse.window.localStorage.getItem(i);
+    if(oldData.destination == '1'){
+     zonaToDo.innerHTML = 
+     `<ul id="nota1" class="final" draggable="true" ondragstart="drag(event)">
+     <li>
+         <a href="#">
+             <button id="edit" class="editar"><i class="fas fa-edit"></i></button>
+             <button id="elim" class="eliminar" onclick="eliminar()"><i class="fas fa-trash-alt"></i></button>
+             <h1> ` + oldData.id + ` </h1>
+             <h1> ` + oldData.nom + ` </h1>
+             <h1> ` + oldData.prevDur + ` </h1>
+             <h1> ` + oldData.term + ` </h1>
+             <h1> ` + oldData.descrip + ` </h1>
+             <h1> ` + oldData.data + ` </h1>
+             <h1> ` + oldData.destination + ` </h1>
+         </a>
+     </li>
+ </ul>`;}else if(oldData.destination == '2'){
+    zonaToDo.innerHTML = 
+    `<ul id="nota1" class="final" draggable="true" ondragstart="drag(event)">
+    <li>
+        <a href="#">
+            <button id="edit" class="editar"><i class="fas fa-edit"></i></button>
+            <button id="elim" class="eliminar" onclick="eliminar()"><i class="fas fa-trash-alt"></i></button>
+            <h1> ` + oldData.id + ` </h1>
+            <h1> ` + oldData.nom + ` </h1>
+            <h1> ` + oldData.prevDur + ` </h1>
+            <h1> ` + oldData.term + ` </h1>
+            <h1> ` + oldData.descrip + ` </h1>
+            <h1> ` + oldData.data + ` </h1>
+            <h1> ` + oldData.destination + ` </h1>
+        </a>
+    </li>
+</ul>`;}else if(oldData.destination == '3'){
+    zonaToDo.innerHTML = 
+    `<ul id="nota1" class="final" draggable="true" ondragstart="drag(event)">
+    <li>
+        <a href="#">
+            <button id="edit" class="editar"><i class="fas fa-edit"></i></button>
+            <button id="elim" class="eliminar" onclick="eliminar()"><i class="fas fa-trash-alt"></i></button>
+            <h1> ` + oldData.id + ` </h1>
+            <h1> ` + oldData.nom + ` </h1>
+            <h1> ` + oldData.prevDur + ` </h1>
+            <h1> ` + oldData.term + ` </h1>
+            <h1> ` + oldData.descrip + ` </h1>
+            <h1> ` + oldData.data + ` </h1>
+            <h1> ` + oldData.destination + ` </h1>
+        </a>
+    </li>
+</ul>`;}
+}
+}
+
+
+
+
+function eliminar(){
+    id = window.localStorage.getItem('id');
+    window.localStorage.removeItem('id');
+    omple();
+}
 
 // if(window.localStorage.getItem('dades') != null){
 //     if(fullData.){
@@ -45,74 +108,6 @@ function guardar(){
 
 //     }
 // }
-
-// function printarSeccions(){
-
-// }
-
-// function afegir(){
-//     const nota  = document.getElementById("1").innerHTML;
-//     document.getElementById("2").innerHTML = nota; 
-//     console.log(nota)
-// }
-
-// function eliminar(){
-//     var eliminado = document.getElementById("nota2");
-//     eliminado.parentNode.removeChild(eliminado);
-
-//     window.localStorage.removeItem('dades');
-// }
-
-
-// function editar(){
-
-// }
-
-// function guardar(){
-//     dades = [];
-//     let dades.push({nom: nom.value, encarregat: encarregat.value, descripcio: descripcio.value});
-//     window.localStorage.setItem('dades', JSON.stringify(dada));
-// }
-
-
-// function dragstart(caja, event) {
-//     // el elemento a arrastrar
-//     event.dataTransfer.setData('Data', caja.id);
-// }
-
-// function drag(target, event) {
-//     console.log("drag");
-//     return false;
-// }
-
-// function dragend(target, event) {
-//     console.log("dragend");
-//     return false;
-// }
-
-// function dragenter(target, event) {
-//     console.log("dragenter");
-//     return false;
-// }
-
-// function dragleave(target, event) {
-//     console.log("dragleave");
-//     return false;
-// }
-
-// function dragover(event) {
-//     console.log("dragover");
-//     event.preventDefault();
-//     return false;
-// }
-
-// function drop(target, event) {
-//     // obtenemos los datos
-//     var caja = event.dataTransfer.getData('Data');
-//     // agregamos el elemento de arrastre al contenedor
-//     target.appendChild(document.getElementById(caja));
-// }
-
 
 // color = document.getElementById("nota").innerHTML;
 // if (color.style.background-color == #592941){
@@ -126,3 +121,4 @@ function guardar(){
 // rgb(89,41,65,0.7); => #592941
 // rgb(178, 211, 168,0.7); => #B2D3A8
 // rgb(237, 229, 166,0.7); => #EDE5A6
+
