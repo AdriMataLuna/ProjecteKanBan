@@ -29,20 +29,27 @@ function guardar(){
     let tempData = {
         id: id.value, nom: nom.value,
     prevDur: prev.value, term: term.value, descrip: desc.value,
-    color: prio.value,data: date.value,destination: desti.value};
+    prio: prio.value,data: date.value,destination: desti.value};
     window.localStorage.setItem(contador, JSON.stringify(tempData));
     contador++;
 }
 
 function omple(){
-    zonaToDo.innerHTML = "<div> <h1> HOLA </h1> </div>";
     for(i = 0;i < contador;i++){
     oldData = JSON.parse.window.localStorage.getItem(i);
+    if(oldData.prio = 1){
+        color = rgba(89,41,65,0.7);
+
+    }else if(oldData.prio = 2){
+        color = rgba(178, 211, 168,0.7);
+    }else if(oldData.prio = 3){
+        color = rgba(237, 229, 166,0.7);
+    }
     if(oldData.destination == '1'){
      zonaToDo.innerHTML = 
      `<ul id="nota1" class="final" draggable="true" ondragstart="drag(event)">
      <li>
-         <a href="#">
+         <a background-color=color href="#">
              <button id="edit" class="editar"><i class="fas fa-edit"></i></button>
              <button id="elim" class="eliminar" onclick="eliminar()"><i class="fas fa-trash-alt"></i></button>
              <h1> ` + oldData.id + ` </h1>
@@ -99,17 +106,6 @@ function eliminar(){
     omple();
 }
 
-// if(window.localStorage.getItem('dades') != null){
-//     if(fullData.){
-
-//     }else if (){
-
-//     }else{
-
-//     }
-// }
-
-// color = document.getElementById("nota").innerHTML;
 // if (color.style.background-color == #592941){
 //     document.getElementById("nota").style.background-color = "#0000FF";
 //     color.getElementById("")
