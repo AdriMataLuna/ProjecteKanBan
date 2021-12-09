@@ -1,14 +1,15 @@
 let zonaToDo = document.getElementById("zona1");
 let zonaDoing = document.getElementById("zona2");
 let zonaDone = document.getElementById("zona3");
-let desti = document.getElementById("zona").value;
-let id = document.getElementById("codi").value;
-let nom = document.getElementById("nom").value;
-let prev = document.getElementById("data_de_previsio").value;
-let term = document.getElementById("data_de_termini").value;
-let desc = document.getElementById("descripcio").value;
-let prio = document.getElementById("prioritat").value;
+let codi = document.getElementById("codi");
+let nom = document.getElementById("nom");
+let prev = document.getElementById("previsio_durada");
+let term = document.getElementById("data_de_termini");
+let desc = document.getElementById("descripcio");
+let prio = document.getElementById("prioritat");
 let guarda_dades = document.getElementById("final");
+
+
 let nota = document.getElementById("nota1");
 
 
@@ -17,19 +18,19 @@ if(window.localStorage.getItem('0') == null){
 }
 
 guarda_dades.addEventListener("click", () => {
-    guardar();
+    // guardar();
     window.location.href = "./index.html";
     // neteja();
-    omple();
+    // omple();
     
 })
 
 function guardar(){
-    date = getDate;
-    let tempData = {
-        id: id.value, nom: nom.value,
+    let date = new.date();
+    date.getTime();
+    let tempData = {id: codi.value, nom: nom.value,
     prevDur: prev.value, term: term.value, descrip: desc.value,
-    prio: prio.value,data: date.value,destination: desti.value};
+    prio: prio.value,data: date.value};
     window.localStorage.setItem(contador, JSON.stringify(tempData));
     contador++;
 }
@@ -52,16 +53,17 @@ function omple(){
          <a background-color=color href="#">
              <button id="edit" class="editar"><i class="fas fa-edit"></i></button>
              <button id="elim" class="eliminar" onclick="eliminar()"><i class="fas fa-trash-alt"></i></button>
-             <h1> ` + oldData.id + ` </h1>
+             <h1> ` + oldDatescrip + ` </h1>
+             <h1> ` + oldData.data + ` </h1>
+             <h1> ` + oldData.da.id + ` </h1>
              <h1> ` + oldData.nom + ` </h1>
              <h1> ` + oldData.prevDur + ` </h1>
              <h1> ` + oldData.term + ` </h1>
-             <h1> ` + oldData.descrip + ` </h1>
-             <h1> ` + oldData.data + ` </h1>
              <h1> ` + oldData.destination + ` </h1>
          </a>
      </li>
- </ul>`;}else if(oldData.destination == '2'){
+ </ul>`;}
+ else if(oldData.destination == '2'){
     zonaToDo.innerHTML = 
     `<ul id="nota1" class="final" draggable="true" ondragstart="drag(event)">
     <li>
@@ -77,7 +79,8 @@ function omple(){
             <h1> ` + oldData.destination + ` </h1>
         </a>
     </li>
-</ul>`;}else if(oldData.destination == '3'){
+</ul>`;}
+else if(oldData.destination == '3'){
     zonaToDo.innerHTML = 
     `<ul id="nota1" class="final" draggable="true" ondragstart="drag(event)">
     <li>
@@ -101,8 +104,8 @@ function omple(){
 
 
 function eliminar(){
-    id = window.localStorage.getItem('id');
-    window.localStorage.removeItem('id');
+    id = window.localStorage.getItem('nota1');
+    window.localStorage.removeItem('nota1');
     omple();
 }
 
@@ -118,3 +121,53 @@ function eliminar(){
 // rgb(178, 211, 168,0.7); => #B2D3A8
 // rgb(237, 229, 166,0.7); => #EDE5A6
 
+// function Showdades()
+// {
+//     let codi = document.getElementById("taskname");
+//     let descripcio = document.getElementById("taskdescription");
+//     let dataC = document.getElementById("taskdateC");
+//     let dataF = document.getElementById("taskdateF");
+//     let responsable = document.getElementById("taskrespons");
+//     let prioritat = document.getElementById("taskstatus");
+
+//     var todo = document.getElementById("todo");
+//     var doing = document.getElementById("doing");
+//     var done = document.getElementById("done");
+//     todo.innerText='';
+   
+//     let taskAnteriory = JSON.parse(window.localStorage.getItem('Tasca'));
+    
+//     if(taskAnteriory != undefined){
+        
+//         for(let i = 0; i<taskAnteriory.length; i++)
+//         {
+//             let div;
+        
+//             if(taskAnteriory[i].Prioritat == 'NoUrgent'){
+//                 div = todo.innerHTML += `<div id = "${taskAnteriory[i].Codi.toLowerCase().split(" ").join("")}" draggable = "true" ondragstart = "drag(event)" ondblclick="doble_click_edita(event)" class="NoUrgent"> 
+//                     <span id = "tasca">${'Codi: ' + taskAnteriory[i].Codi + '<br>' + 'Descripció: ' + taskAnteriory[i].Descripcio + '<br>' + 'Responsable: ' + taskAnteriory[i].Responsable + '<button class="material-icons trash" id = "delete-button" onclick="eliminar_tasques(' + i})"> delete </button></span>
+//                 </div>
+//                 `
+//             }
+//             else if(taskAnteriory[i].Prioritat == 'Urgent'){
+//                 div = todo.innerHTML += `
+//                 <div id = "${taskAnteriory[i].Codi.toLowerCase().split(" ").join("")}" draggable = "true" ondragstart = "drag(event)" ondblclick="doble_click_edita(event)" class="Urgent"> 
+//                     <span id = "tasca">${'Codi: ' + taskAnteriory[i].Codi + '<br>' + 'Descripció: ' + taskAnteriory[i].Descripcio + '<br>' + 'Responsable: ' + taskAnteriory[i].Responsable + '<button class="material-icons trash" id = "delete-button" onclick="eliminar_tasques(' + i})"> delete </button></span>
+//                 </div>
+//                 `
+//             }
+//             else if(taskAnteriory[i].Prioritat == 'MoltUrgent'){
+//                 div = todo.innerHTML += `
+//                 <div id = "${taskAnteriory[i].Codi.toLowerCase().split(" ").join("")}" draggable = "true" ondragstart = "drag(event)" ondblclick="doble_click_edita(event)" class="MoltUrgent"> 
+//                     <span id = "tasca">${'Codi: ' + taskAnteriory[i].Codi + '<br>' + 'Descripció: ' + taskAnteriory[i].Descripcio + '<br>' + 'Responsable: ' + taskAnteriory[i].Responsable + '<button class="material-icons trash" id = "delete-button" onclick="eliminar_tasques(' + i})"> delete </button></span>
+//                 </div>
+//                 `
+//             }
+//             // if(taskAnteriory[i]. == 'NoUrgent')
+//             // {
+            
+//             // }
+//     }
+// }
+
+// }
