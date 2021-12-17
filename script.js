@@ -17,20 +17,22 @@ if(window.localStorage.getItem('0') == null){
     contador = 0;
 }
 
-guarda_dades.addEventListener("click", () => {
-    // guardar();
+function finalitza(){
+    guardar();
     window.location.href = "./index.html";
     // neteja();
     // omple();
     
-})
+}
 
 function guardar(){
-    let date = new.date();
+    let date = new Date();
+
     date.getTime();
+    console.log(codi.value);
     let tempData = {id: codi.value, nom: nom.value,
     prevDur: prev.value, term: term.value, descrip: desc.value,
-    prio: prio.value,data: date.value};
+    prio: prio.value,data: date.value,destination: 0, idNota: contador};
     window.localStorage.setItem(contador, JSON.stringify(tempData));
     contador++;
 }
@@ -53,13 +55,13 @@ function omple(){
          <a background-color=color href="#">
              <button id="edit" class="editar"><i class="fas fa-edit"></i></button>
              <button id="elim" class="eliminar" onclick="eliminar()"><i class="fas fa-trash-alt"></i></button>
-             <h1> ` + oldDatescrip + ` </h1>
-             <h1> ` + oldData.data + ` </h1>
-             <h1> ` + oldData.da.id + ` </h1>
+             <h1 hidden> ` + oldData.idNota + ` </h1>
+             <h1> ` + oldData.id + ` </h1>
              <h1> ` + oldData.nom + ` </h1>
              <h1> ` + oldData.prevDur + ` </h1>
              <h1> ` + oldData.term + ` </h1>
-             <h1> ` + oldData.destination + ` </h1>
+             <h1> ` + oldData.descrip + ` </h1>
+             <h1> ` + oldData.data + ` </h1>
          </a>
      </li>
  </ul>`;}
@@ -70,13 +72,13 @@ function omple(){
         <a href="#">
             <button id="edit" class="editar"><i class="fas fa-edit"></i></button>
             <button id="elim" class="eliminar" onclick="eliminar()"><i class="fas fa-trash-alt"></i></button>
-            <h1> ` + oldData.id + ` </h1>
-            <h1> ` + oldData.nom + ` </h1>
-            <h1> ` + oldData.prevDur + ` </h1>
-            <h1> ` + oldData.term + ` </h1>
-            <h1> ` + oldData.descrip + ` </h1>
-            <h1> ` + oldData.data + ` </h1>
-            <h1> ` + oldData.destination + ` </h1>
+            <h1 hidden> ` + oldData.idNota + ` </h1>
+             <h1> ` + oldData.id + ` </h1>
+             <h1> ` + oldData.nom + ` </h1>
+             <h1> ` + oldData.prevDur + ` </h1>
+             <h1> ` + oldData.term + ` </h1>
+             <h1> ` + oldData.descrip + ` </h1>
+             <h1> ` + oldData.data + ` </h1>
         </a>
     </li>
 </ul>`;}
@@ -87,13 +89,13 @@ else if(oldData.destination == '3'){
         <a href="#">
             <button id="edit" class="editar"><i class="fas fa-edit"></i></button>
             <button id="elim" class="eliminar" onclick="eliminar()"><i class="fas fa-trash-alt"></i></button>
-            <h1> ` + oldData.id + ` </h1>
-            <h1> ` + oldData.nom + ` </h1>
-            <h1> ` + oldData.prevDur + ` </h1>
-            <h1> ` + oldData.term + ` </h1>
-            <h1> ` + oldData.descrip + ` </h1>
-            <h1> ` + oldData.data + ` </h1>
-            <h1> ` + oldData.destination + ` </h1>
+            <h1 hidden> ` + oldData.idNota + ` </h1>
+             <h1> ` + oldData.id + ` </h1>
+             <h1> ` + oldData.nom + ` </h1>
+             <h1> ` + oldData.prevDur + ` </h1>
+             <h1> ` + oldData.term + ` </h1>
+             <h1> ` + oldData.descrip + ` </h1>
+             <h1> ` + oldData.data + ` </h1>
         </a>
     </li>
 </ul>`;}
@@ -104,11 +106,19 @@ else if(oldData.destination == '3'){
 
 
 function eliminar(){
-    id = window.localStorage.getItem('nota1');
-    window.localStorage.removeItem('nota1');
-    omple();
+    e_nota = document.getElementById("");
+        e_nota.remove();
+    }
+
+function editar(){
+    document.getElementById("titol").contentEditable = true;
+
 }
 
+function cambiar_fondo() {
+    var nota = document.getElementById("nota1");
+         nota.style.background="#9cc505f5";   
+}
 // if (color.style.background-color == #592941){
 //     document.getElementById("nota").style.background-color = "#0000FF";
 //     color.getElementById("")

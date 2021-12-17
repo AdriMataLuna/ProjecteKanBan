@@ -158,3 +158,43 @@ ul:hover,ul:focus{
     border-style: solid;
     font-family: 100%;
 }
+
+.prioritat {
+    border-color: #db34ca;
+    color: #fff;
+    box-shadow: 0 0 60px 60px #59275d inset, 0 0 0 0 #65285a;
+    -webkit-transition: all 150ms ease-in-out;
+    transition: all 150ms ease-in-out;
+    font-size: 75%;
+    width: 60px;
+    height: 30px;
+    border-radius: 50%;
+    position: relative;
+    right: -185px;
+    top: 10px;
+
+}
+.prioritat:hover {
+    box-shadow: 0 0 10px 0 #431752 inset, 0 0 10px 4px #5f2e67;
+    transform: translateY(-8px);   
+}
+
+.moure {
+    border-color: #7adb34;
+    color: #fff;
+    box-shadow: 0 0 60px 60px #0f7d09 inset, 0 0 0 0 #52c12d;
+    -webkit-transition: all 150ms ease-in-out;
+    transition: all 150ms ease-in-out;
+    font-size: 75%;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    position: relative;
+    right: -250px;
+    top: -19px;
+
+}
+.moure:hover {
+    box-shadow: 0 0 10px 0 #20ff42 inset, 0 0 10px 4px #74ff39;
+    transform: translateY(-8px);   
+}
