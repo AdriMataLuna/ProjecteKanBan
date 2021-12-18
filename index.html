@@ -1,47 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style.css">
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css"/>
-      <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Reenie+Beanie"/>
-     
-    <title></title>
-
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Projecte Kanban</title>
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css"/>
 </head>
-<body >
-    <div id="zona1" class="seccio1" ondrop="drop(event)" ondragover="allowDrop(event)">ToDo </div>
-    <div id="zona2" class="seccio2" ondrop="drop(event)" ondragover="allowDrop(event)">DOING</div>
-    <div id="zona3" class="seccio3" ondrop="drop(event)" ondragover="allowDrop(event)">DONE</div>
-
-    <a href="./formulari.html" class="afegir" id="boto"><i class="fas fa-plus-circle"></i></a>
-    
-
-    <ul id="nota1" class="final" draggable="true" ondragstart="drag(event)" hidden>
-        <li>
-            <a href="#">
-                <button id="edit" class="editar"><i class="fas fa-edit"></i></button>
-                <button id="elim" class="eliminar" onclick="eliminar()"><i class="fas fa-trash-alt"></i></button>
-                <h1 id="informacio"></h1>
-            </a>
-        </li>
-    </ul>
-    
-    
-
-    <div id="general">
-
-
-
-    </div>
-
-    
-
-    <script type="text/javascript" src="./script.js"></script>
-    
+<body>
+	<div class="taulell">
+		<!-- <div class="taulell__column">
+			<div class="taulell__column-title">TO DO</div>
+			<div class="taulell__items">
+				<div contenteditable class="taulell__item-input">Entra la tasca
+				</div>
+				<div class="taulell__dropzone"></div>
+			</div>
+			<button class="taulell__add-item" type="button"><i class="fas fa-plus-circle"></i></button>
+		</div> -->
+	</div>
+	<script src="scripts/script.js" type="module"></script>
 </body>
 </html>

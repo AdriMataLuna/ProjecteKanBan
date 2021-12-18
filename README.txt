@@ -1,13 +1,38 @@
 # ProjecteKanBan
 JOAN BATALLA I ADRIÀ MATA
 
+GUIA D'USUARI:
 
-El nostre projecte actualment s'inicia i mostra el formulàri i la pàgina d'index
-pero tot i que guarda les dades no aconseguim fer que les torni a carregar dintre
-de cada secció que representarien els 3 DIV principals (TODO/DOING/DONE).
+LA PÀGINA WEB CONSTA DE 3 APARTATS (TO DO, DOING, DONE). S'HA CREAT PER COBRIR LA FUNCIÓ DE
+TAULELL INFORMATIU MOLT ÚTIL PER A TREBALLS GRUPALS O ADMINISTRACIÓ PERSONAL DE FEINA. PER A CADA 
+APRTAT EXISTEIX UNA OPCIÓ D'AFEGIR-NE DIRECTAMENT UNA TASCA, TOT I QUE POSTERIORMENT MITJANÇANT
+"DRAG AND DROP" PODEM MOURE-LA DE COLUMNA. REALITZANT DOBLE CLICK SOBRE LA TASCA PODEM ELIMINAR-LA.
 
-A la pagina d'index hi ha una taula amb un camp hidden, que seria per poder mostrar un exemple d'una nota
+FUTURES IMPLEMENTACIONS:
+-UN BOTÓ PER INDICAR QUE UNA TASCA ES PRIORITÀRIA.
 
-La feina l'hem repartit progresivament, es a dir, intercanviant els torns una persona era l'encarregada per exemple de crear
-i distribuir l'html mentre l'altre feia el CSS. Despres una persona per exemple s'encarregava d'aplicar funcionalitat als botons,
-mentre l'altre creava codi per enmagatzemar i mostrar dades del LocalStorage.
+GUIA D'ARXIUS:
+./ProjecteKanBan
+->README.txt (arxiu amb tota l'informació necesària del projecte)
+->style.css (arxiu d'estils de la pàgina web)
+->wallpaper.jpg (imatge de fons escollida)
+->index.html (arxiu principal de mostra en html)
+->./scripts
+-->script.js(script principal)
+-->./creador
+--->columnes.js (creació de un div per cada item)
+--->droppableZone.js (creació de les zones drag and drop)
+--->items.js (creació dels items)
+--->taulell.js (creació del taulell)
+-->./LocalStorage
+--->LocalStorageFunctions.js (Administració del LocalStorage)
+
+INDIVIDUALMENT A CADA ARXIU I HAN COMENTARIS AMB L'EXPLICACIÓ DE QUE S'ESTA FENT A CADA PAS.
+
+PER LA CREACIÓ D'AQUESTA PÀGINA WEB S'HAN AGAFAT REFERÈNCIES DE:
+
+https://www.youtube.com/c/soydalto/videos
+https://www.w3schools.com/js/
+https://www.w3schools.com/html/
+https://www.youtube.com/c/DamianSireDesarrollo/videos
+consultes de clase i anteriors projectes.

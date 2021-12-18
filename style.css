@@ -1,200 +1,59 @@
-body {
-    height: 650px;
-    width: 95%;
+body{
+	height: 300px;
     display:flex;
     justify-content: center;
     align-items: center;
-    background-image: url("Pictures/wallpaper.jpg");
-    background-position: center;
+	background-image: url("wallpaper.jpg");
+	background-position: no-repeat;
 }
-.seccio1{
-    background-color: rgba(132, 130, 143,0.7);
-    border: black 5px dashed;
-    color: black;
-    float: left;
-    height: 650px;
-    width: 31.6%;
-    text-align: center;
-    font-size: 100px;
-    font-size: 4vw;
-    border-style: dashed;
-    font-family: 100%;
-    overflow: hidden;
-    text-decoration-line: underline;
-}
-.seccio2{
-    background-color: rgba(132, 130, 143,0.7);
-    border: black 5px dashed;
-    border-style: dashed;
-    color: black;
-    float: left;
-    height: 650px;
-    width: 31.6%;
-    font-size: 100px;
-    font-size: 4vw;
-    text-align: center;
-    font-family: 100%;
-    overflow: hidden;
-    text-decoration-line: underline;
-}
-.seccio3{
-    background-color: rgba(132, 130, 143,0.7);
-    border: black 5px dashed;
-    border-style: dashed;
-    color: black;
-    float: left;
-    height: 650px;
-    width: 31.6%;
-    font-size: 100px;
-    font-size: 4vw;
-    text-align: center;
-    font-family: 100%;
-    overflow: hidden;
-    text-decoration-line: underline;
+.taulell {
+	display: flex;
+	padding: 30px;
+	width: 1080px;
+	background: #009578;
+	border-radius: 5px;
 }
 
-.afegir {
-    font-size: 55px;
-    text-transform: uppercase;
-    font-weight: bold;
-    color: black;
-    border-radius: 5px;
-    letter-spacing: 2px;
-    background-color: rgb(149, 147, 217);
-    padding: 15px 15px;
-    position: fixed;
-    bottom: 40px;
-    right: 90px;
-    transition: all 300ms ease 0ms;
-    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
-    z-index: 99;
+.taulell * {
+	font-family: sans-serif;
 }
 
-.afegir:hover {
-    background-color: rgb(229, 190, 237); /* Color de fondo al pasar el cursor */
-    box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.3);
-    transform: translateY(-10px);
+.taulell__column {
+	flex: 1;
 }
 
-.editar {
-    border-color: #3498db;
-    color: #fff;
-    box-shadow: 0 0 60px 60px #3498db inset, 0 0 0 0 #3498db;
-    -webkit-transition: all 150ms ease-in-out;
-    transition: all 150ms ease-in-out;
-    font-size: 75%;
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    position: relative;
-    right: -250px;
-    top: 15px;
-
-}
-.editar:hover {
-    box-shadow: 0 0 10px 0 #3498db inset, 0 0 10px 4px #3498db;
-    transform: translateY(-8px);   
+.taulell__column-title {
+	margin-bottom: 20px;
+	font-size: 30px;
+	color: white;
+	user-select: none;
 }
 
-
-.eliminar {
-    border-color: #bd1414;
-    color: #fff;
-    box-shadow: 0 0 60px 60px #760000 inset, 0 0 0 0 #fb0303;
-    -webkit-transition: all 150ms ease-in-out;
-    transition: all 150ms ease-in-out;
-    font-size: 75%;
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    position: relative;
-    right: -180px;
-    top: 15px;
+.taulell__item-input {
+	padding: 10px 15px;
+	box-sizing: border-box;
+	background: white;
+	border-radius: 5px;
+	cursor: pointer;
 }
 
-.eliminar:hover {
-    box-shadow: 0 0 10px 0 #ff4f4f inset, 0 0 10px 4px #f04141;
-    transform: translateY(-8px);   
+.taulell__dropzone {
+	height: 10px;
+	transition: background 0.15s, height 0.15s;
 }
 
-h4{
-    overflow: scroll;
-    width:90%;  
+.taulell__dropzone--active {
+	height: 20px;
+	background: rgba(0, 0, 0, 0.25);
 }
 
-ul{
-    overflow:none;  /* ocultar el texto que no salga de la nota*/
-    background-color: #592941;
-    list-style:none;
-    font-family: 'Reenie Beanie', cursive;
-    box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.9);
-}
-
-ul li a{
-    text-decoration:none;
-    color: #000;
-    display:block;  /* genera un bloque por cada li */
-    height: 250px; /* altura de la Nota */
-    width: 300px;  /* anchura de la Nota */
-}
-
-ul:hover,ul:focus{
-    -moz-box-shadow:10px 10px 7px rgba(0,0,0,.7);
-    -webkit-box-shadow: 10px 10px 7px rgba(0,0,0,.7);
-    box-shadow:10px 10px 7px rgba(0,0,0,.7);
-    transform: scale(1.25);
-    z-index:5;
-}
-
-.formulari{
-    background-color: rgba(132, 130, 143,0.7);
-    border: black 5px solid;
-    color: black;
-    float: left;
-    height: 450px;
-    width: 31.6%;
-    text-align: left;
-    font-size: 4vh;
-    border-style: solid;
-    font-family: 100%;
-}
-
-.prioritat {
-    border-color: #db34ca;
-    color: #fff;
-    box-shadow: 0 0 60px 60px #59275d inset, 0 0 0 0 #65285a;
-    -webkit-transition: all 150ms ease-in-out;
-    transition: all 150ms ease-in-out;
-    font-size: 75%;
-    width: 60px;
-    height: 30px;
-    border-radius: 50%;
-    position: relative;
-    right: -185px;
-    top: 10px;
-
-}
-.prioritat:hover {
-    box-shadow: 0 0 10px 0 #431752 inset, 0 0 10px 4px #5f2e67;
-    transform: translateY(-8px);   
-}
-
-.moure {
-    border-color: #7adb34;
-    color: #fff;
-    box-shadow: 0 0 60px 60px #0f7d09 inset, 0 0 0 0 #52c12d;
-    -webkit-transition: all 150ms ease-in-out;
-    transition: all 150ms ease-in-out;
-    font-size: 75%;
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    position: relative;
-    right: -250px;
-    top: -19px;
-
-}
-.moure:hover {
-    box-shadow: 0 0 10px 0 #20ff42 inset, 0 0 10px 4px #74ff39;
-    transform: translateY(-8px);   
+.taulell__add-item {
+	width: 100%;
+	padding: 10px 0;
+	font-size: 16px;
+	color: white;
+	background: rgba(0, 0, 0, 0.1);
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
 }
