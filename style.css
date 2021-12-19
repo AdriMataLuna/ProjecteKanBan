@@ -1,11 +1,12 @@
+/* es defineix l'estil del cos general de la pàgina */
 body{
-	height: 300px;
     display:flex;
     justify-content: center;
     align-items: center;
 	background-image: url("wallpaper.jpg");
 	background-position: no-repeat;
 }
+/* definim l'estil del taulell */
 .taulell {
 	display: flex;
 	padding: 30px;
@@ -14,14 +15,17 @@ body{
 	border-radius: 5px;
 }
 
+/* definim la tipografia tant del taulell com de tots els "childs" */
 .taulell * {
-	font-family: sans-serif;
+	font-family: Arial, Helvetica, sans-serif;
 }
 
+/* fem que es mostrin totes les columnes repartides equitativament */
 .taulell__column {
 	flex: 1;
 }
 
+/* definim tipografia i color dels titols */
 .taulell__column-title {
 	margin-bottom: 20px;
 	font-size: 30px;
@@ -29,23 +33,16 @@ body{
 	user-select: none;
 }
 
+/* definim l'input d'entrada de dades */
 .taulell__item-input {
 	padding: 10px 15px;
 	box-sizing: border-box;
-	background: white;
+	background: grey;
 	border-radius: 5px;
 	cursor: pointer;
 }
 
-.taulell__dropzone {
-	height: 10px;
-	transition: background 0.15s, height 0.15s;
-}
-
-.taulell__dropzone--active {
-	height: 20px;
-	background: rgba(0, 0, 0, 0.25);
-}
+/* definim estil per al botó d'afegir */
 
 .taulell__add-item {
 	width: 100%;
@@ -56,4 +53,16 @@ body{
 	border: none;
 	border-radius: 5px;
 	cursor: pointer;
+}
+
+/* Degut a que volem implementar drag'n'drop ens veiem "obligats" a crear divs amb zona draggable, i podem
+optar a donar-los estil també */
+.taulell__dropzone {
+	height: 10px;
+	transition: background 0.15s, height 0.15s;
+}
+
+.taulell__dropzone--active {
+	height: 20px;
+	background: rgba(0, 0, 0, 0.25);
 }

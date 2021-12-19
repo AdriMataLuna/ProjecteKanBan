@@ -1,5 +1,5 @@
 import Columna from "./columnes.js";
-
+// crearem una classe per poder inicialitzar cada secció necesària del taulell
 export default class Taulell {
 	constructor(root) {
 		this.root = root;
@@ -11,6 +11,7 @@ export default class Taulell {
 		});
 	}
 
+	// crearem un mètode que s'anomenarà columnes i tindrà el format de les columnes desitjades.
 	static columnes() {
 		return [
 			{

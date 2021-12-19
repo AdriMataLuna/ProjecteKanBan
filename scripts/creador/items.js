@@ -1,13 +1,15 @@
 import zonaDroppable from "./droppableZone.js";
 import LocalStorageKanban from "../LocalStorage/LocalStorageFunctions.js";
 
+// crearem la classe item, que sera l'encarregada d'obtenir cada item i tractarlo mitjançant local storage
+// amb l'ajut d'un creador/inicialitzador/contructor.
 export default class Item {
 
 	constructor(id, content) {
 		const bottomDropZone = zonaDroppable.createDroppableZone();
 
 		this.elements = {};
-		this.elements.root = Item.createRoot();
+		this.elements.root = Item.creaArrel();
 		this.elements.input = this.elements.root.querySelector(".taulell__item-input");
 
 		this.elements.root.dataset.id = id;
@@ -15,6 +17,8 @@ export default class Item {
 		this.content = content;
 		this.elements.root.appendChild(bottomDropZone);
 
+		// hem definit que les zones amb blur "distorsió" o "desenfoc"
+		// siguin les zones afectades pel drop.
 		const onBlur = () => {
 			const newContent = this.elements.input.textContent.trim();
 
@@ -30,8 +34,17 @@ export default class Item {
 		};
 
 		this.elements.input.addEventListener("blur", onBlur);
-		this.elements.root.addEventListener("dblclick", () => {
-			const check = confirm("Are you sure you want to delete this item?");
+
+		// afegirem una funcio per cambiar la prioritat amb doble click
+		// this.elements.root.addEventListener("dblclick", () => {
+		// 	if (){}
+		// });
+
+		// també afegirem la funció d'eliminar amb triple click.
+		this.elements.root.addEventListener('click', function (evt) {
+			if (evt.detail === 3) {
+			const check = confirm("Si us plau, confirma l'eliminació. Estas segur que vols eliminar aquest item ?");
+		}
 
 			if (check) {
 				LocalStorageKanban.eliminarItem(id);
@@ -50,7 +63,8 @@ export default class Item {
 		});
 	}
 
-	static createRoot() {
+	// aquest mètode guardarà l'estructura de tot el que conté l'informacio de cada item.
+	static creaArrel() {
 		const range = document.createRange();
 
 		range.selectNode(document.body);
