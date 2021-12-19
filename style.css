@@ -11,7 +11,7 @@ body{
 	display: flex;
 	padding: 30px;
 	width: 1080px;
-	background: #009578;
+	background: #829191;
 	border-radius: 5px;
 }
 
@@ -29,17 +29,24 @@ body{
 .taulell__column-title {
 	margin-bottom: 20px;
 	font-size: 30px;
-	color: white;
+	color: #2C423F;
 	user-select: none;
 }
 
-/* definim l'input d'entrada de dades */
+/* definim la mostra i input de dades */
 .taulell__item-input {
 	padding: 10px 15px;
 	box-sizing: border-box;
-	background: grey;
+	background: #7785AC;
 	border-radius: 5px;
-	cursor: pointer;
+}
+
+/* definim una estil per les prioritaries */
+.taulell__item-havepriority {
+	padding: 10px 15px;
+	box-sizing: border-box;
+	background: #A5E6BA;
+	border-radius: 5px;
 }
 
 /* definim estil per al botó d'afegir */
@@ -52,7 +59,6 @@ body{
 	background: rgba(0, 0, 0, 0.1);
 	border: none;
 	border-radius: 5px;
-	cursor: pointer;
 }
 
 /* Degut a que volem implementar drag'n'drop ens veiem "obligats" a crear divs amb zona draggable, i podem

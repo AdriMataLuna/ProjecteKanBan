@@ -35,16 +35,9 @@ export default class Item {
 
 		this.elements.input.addEventListener("blur", onBlur);
 
-		// afegirem una funcio per cambiar la prioritat amb doble click
-		// this.elements.root.addEventListener("dblclick", () => {
-		// 	if (){}
-		// });
-
-		// també afegirem la funció d'eliminar amb triple click.
-		this.elements.root.addEventListener('click', function (evt) {
-			if (evt.detail === 3) {
+		// també afegirem la funció d'eliminar amb doble click.
+		this.elements.root.addEventListener("dblclick", () => {
 			const check = confirm("Si us plau, confirma l'eliminació. Estas segur que vols eliminar aquest item ?");
-		}
 
 			if (check) {
 				LocalStorageKanban.eliminarItem(id);
