@@ -103,6 +103,10 @@ function llegirItems() {
 				id: 3,
 				items: []
 			},
+			{
+				id: 4,
+				items: []
+			}
 		];
 	}
 
