@@ -25,10 +25,6 @@ export default class Taulell {
 			{
 				id: 3,
 				title: "Done"
-			},
-			{
-				id: 4,
-				title: "Max Priority"
 			}
 		];
 	}

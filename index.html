@@ -5,26 +5,30 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	
-	<!-- afegim un titol i inclohem tant el fitxer d'estils com la referència que farem servir per als icones -->
+	<!-- afegim un titol i una imatge de capçelera,
+		 i inclohem tant el fitxer d'estils com la referència que farem servir per als icones -->
 	<title>Projecte Kanban</title>
+	<link rel="shortcut icon" href="https://thumbs.dreamstime.com/b/icono-del-tablero-46727779.jpg">
 	<link rel="stylesheet" href="style.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css"/>
 </head>
 <body>
-
+	
 	<!-- tot seguit declararem un unic div general amb tota l'informació necesària per tenir-la com a guia
 		i poder despres seguir afegint html en aquest mateix div que anomenarem "taulell"-->
 	<div class="taulell">
+		<!-- Format general de la columna amb les seves seccions -->
 		<!-- <div class="taulell__column">
-			<div class="taulell__column-title">TO DO</div>
-			<div class="taulell__items">
-				<div contenteditable class="taulell__item-input">Entra la tasca
-				</div>
-				<div class="taulell__dropzone"></div>
+			<div class="taulell__column-title">TITOL DE LA TASCA</div>
+			<div class="taulell__items" draggable="true">
+			<div class="taulell__item-input" contenteditable></div>
+			<div class="taulell__item-input" contenteditable></div>
+			<input type=date></input><input type=date></input>
+			<button type="button" onclick="prioritza()" ><i class="fas fa-exclamation-circle"></i></button>
 			</div>
-			<button class="taulell__add-item" type="button"><i class="fas fa-plus-circle"></i></button>
 		</div> -->
 	</div>
+	<a href="./support.html" class="afegir" id="boto"><i class="fas fa-info-circle"></i></a>
 	<script src="scripts/script.js" type="module"></script>
 </body>
 </html>

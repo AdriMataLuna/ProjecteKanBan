@@ -35,9 +35,18 @@ export default class Item {
 
 		this.elements.input.addEventListener("blur", onBlur);
 
-		// també afegirem la funció d'eliminar amb doble click.
+		this.elements.root.addEventListener("dragstart", e => {
+			e.dataTransfer.setData("text/plain", id);
+		});
+
+		this.elements.input.addEventListener("drop", e => {
+			e.preventDefault();
+		});
+		
+		// també afegirem la funció de modificar la prioritat amb doble click.
 		this.elements.root.addEventListener("dblclick", () => {
-			const check = confirm("Si us plau, confirma l'eliminació. Estas segur que vols eliminar aquest item ?");
+			
+			const check = confirm("Are you sure you want to delete?");
 
 			if (check) {
 				LocalStorageKanban.eliminarItem(id);
@@ -47,14 +56,11 @@ export default class Item {
 			}
 		});
 
-		this.elements.root.addEventListener("dragstart", e => {
-			e.dataTransfer.setData("text/plain", id);
+		// també afegirem la funció de modificar la prioritat amb doble click.
+		this.elements.root.addEventListener("", () => {
+			
 		});
-
-		this.elements.input.addEventListener("drop", e => {
-			e.preventDefault();
-		});
-	}
+}
 
 	// aquest mètode guardarà l'estructura de tot el que conté l'informacio de cada item.
 	static creaArrel() {
@@ -64,7 +70,10 @@ export default class Item {
 
 		return range.createContextualFragment(`
 			<div class="taulell__item" draggable="true">
-				<div class="taulell__item-input" contenteditable></div>
+			<div class="taulell__item-input" contenteditable></div>
+			<div class="taulell__item-input" contenteditable></div>
+			<input type=date></input><input type=date></input>
+			<button type="button" onclick="prioritza()" ><i class="fas fa-exclamation-circle"></i></button>
 			</div>
 		`).children[0];
 	}

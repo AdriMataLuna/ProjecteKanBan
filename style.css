@@ -1,10 +1,11 @@
 /* es defineix l'estil del cos general de la pàgina */
 body{
-    display:flex;
+    display:grid;
     justify-content: center;
     align-items: center;
-	background-image: url("wallpaper.jpg");
+	background-image: url("./Images/wallpaper.jpg");
 	background-position: no-repeat;
+	
 }
 /* definim l'estil del taulell */
 .taulell {
@@ -18,9 +19,10 @@ body{
 /* definim la tipografia tant del taulell com de tots els "childs" */
 .taulell * {
 	font-family: Arial, Helvetica, sans-serif;
+	margin: 2px;
 }
 
-/* fem que es mostrin totes les columnes repartides equitativament */
+/* fem que es mostrin totes les columnes repartint l'espai equitativament */
 .taulell__column {
 	flex: 1;
 }
@@ -31,6 +33,7 @@ body{
 	font-size: 30px;
 	color: #2C423F;
 	user-select: none;
+	text-align: center;
 }
 
 /* definim la mostra i input de dades */
@@ -71,4 +74,39 @@ optar a donar-los estil també */
 .taulell__dropzone--active {
 	height: 20px;
 	background: rgba(0, 0, 0, 0.25);
+}
+
+.afegir {
+    font-size: 30px;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: black;
+    border-radius: 5px;
+    letter-spacing: 2px;
+    background-color: rgb(149, 147, 217);
+    padding: 15px 15px;
+    position: fixed;
+    bottom: 40px;
+    right: 90px;
+    transition: all 300ms ease 0ms;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.afegir:hover {
+    background-color: rgb(229, 190, 237); /* Color de fondo al pasar el cursor */
+    box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.3);
+    transform: translateY(-10px);
+}
+
+
+.tutorial{
+text-align: center;
+}
+
+.tutorial_titol{
+	padding: 30px;
+	width: 1080px;
+	background: #829191;
+	border-radius: 5px;
+	text-align: center;
 }
